@@ -1,0 +1,146 @@
+{
+    "Tomato___Late_blight": {
+      "description": "Late blight is a severe fungal disease that affects tomato and potato plants, often causing rapid plant decline.",
+      "symptoms": [
+        "Water-soaked lesions on leaves",
+        "Dark, irregular spots on stems and fruit",
+        "Wilting and yellowing of affected leaves"
+      ],
+      "treatment": [
+        "Apply fungicides such as copper sulfate or chlorothalonil",
+        "Remove and destroy affected plant material",
+        "Ensure proper spacing to improve air circulation"
+      ],
+      "prevention": [
+        "Avoid overhead watering",
+        "Rotate crops each season",
+        "Plant resistant tomato varieties"
+      ]
+    },
+    "Tomato___Leaf_Mold": {
+      "description": "Leaf mold is a fungal disease that primarily affects the foliage of tomatoes, leading to reduced photosynthesis and growth.",
+      "symptoms": [
+        "Yellowish spots on upper sides of leaves",
+        "Fuzzy, olive-green fungal growth on the undersides of leaves",
+        "Premature leaf drop"
+      ],
+      "treatment": [
+        "Use fungicides like sulfur or neem oil",
+        "Prune infected leaves and remove debris",
+        "Increase airflow and avoid overhead watering"
+      ],
+      "prevention": [
+        "Maintain proper plant spacing",
+        "Remove fallen leaves and plant debris",
+        "Use drip irrigation to avoid wetting foliage"
+      ]
+    },
+    "Tomato___Septoria_leaf_spot": {
+      "description": "Septoria leaf spot is a fungal infection that causes spots on tomato leaves, leading to premature defoliation.",
+      "symptoms": [
+        "Small, dark spots with gray centers on lower leaves",
+        "Yellow halos around the lesions",
+        "Leaves turning yellow and dropping prematurely"
+      ],
+      "treatment": [
+        "Apply fungicides like chlorothalonil or copper-based products",
+        "Remove infected leaves immediately",
+        "Improve plant spacing for better air circulation"
+      ],
+      "prevention": [
+        "Avoid overhead watering",
+        "Dispose of infected plant material",
+        "Plant resistant tomato varieties"
+      ]
+    },
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+      "description": "Spider mites are tiny pests that cause significant damage to tomato plants by feeding on plant cells, leading to stippling and leaf damage.",
+      "symptoms": [
+        "Yellow speckling or stippling on leaves",
+        "Leaves becoming brittle and dropping",
+        "Presence of fine webbing on the underside of leaves"
+      ],
+      "treatment": [
+        "Use miticides like insecticidal soap or neem oil",
+        "Spray plants with a strong jet of water to dislodge mites",
+        "Encourage natural predators like ladybugs"
+      ],
+      "prevention": [
+        "Regularly inspect plants for early signs of mites",
+        "Keep plants well-watered to reduce stress",
+        "Increase humidity around plants"
+      ]
+    },
+    "Tomato___Target_Spot": {
+      "description": "Target spot is a fungal disease that causes dark, concentric-ring spots on tomato leaves, reducing plant vigor.",
+      "symptoms": [
+        "Small, round lesions with dark concentric rings",
+        "Lesions surrounded by yellow halos",
+        "Leaves curling and dropping prematurely"
+      ],
+      "treatment": [
+        "Apply fungicides like copper-based or mancozeb products",
+        "Remove affected leaves to reduce spread",
+        "Improve air circulation by spacing plants appropriately"
+      ],
+      "prevention": [
+        "Avoid wetting foliage during watering",
+        "Rotate crops to reduce disease buildup",
+        "Use resistant tomato varieties"
+      ]
+    },
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+      "description": "Tomato Yellow Leaf Curl Virus (TYLCV) is a viral disease that causes yellowing, curling, and stunting in tomatoes.",
+      "symptoms": [
+        "Yellowing and curling of leaves",
+        "Stunted plant growth",
+        "Deformed flowers and fruit"
+      ],
+      "treatment": [
+        "There is no cure for TYLCV, but remove and destroy infected plants",
+        "Control whiteflies, which transmit the virus, with insecticides",
+        "Practice proper sanitation and remove plant debris"
+      ],
+      "prevention": [
+        "Use resistant tomato varieties",
+        "Control whitefly populations",
+        "Avoid planting tomatoes in areas with a history of TYLCV"
+      ]
+    },
+    "Tomato___Tomato_mosaic_virus": {
+      "description": "Tomato Mosaic Virus (ToMV) is a viral disease that causes mottled yellow and green leaves, reducing tomato yield and quality.",
+      "symptoms": [
+        "Mottled yellow and green pattern on leaves",
+        "Stunted growth and deformed fruit",
+        "Leaf curling and distortion"
+      ],
+      "treatment": [
+        "There is no cure for ToMV, but remove and destroy infected plants",
+        "Use resistant tomato varieties",
+        "Disinfect tools and equipment to prevent spread"
+      ],
+      "prevention": [
+        "Use virus-free seeds and resistant varieties",
+        "Control aphid populations, which can spread the virus",
+        "Practice crop rotation and remove infected plants"
+      ]
+    },
+    "Tomato___healthy": {
+      "description": "Healthy tomato plants exhibit vigorous growth and produce strong, green leaves, with no visible signs of disease or pests.",
+      "symptoms": [
+        "Bright green, undamaged leaves",
+        "Healthy, strong plant growth",
+        "Vibrant flowers and fruit production"
+      ],
+      "treatment": [
+        "Maintain regular watering and fertilization schedules",
+        "Monitor for pests and diseases regularly",
+        "Prune dead or diseased branches promptly"
+      ],
+      "prevention": [
+        "Ensure good soil health and proper drainage",
+        "Rotate crops each season",
+        "Provide ample space for growth and airflow"
+      ]
+    }
+}
