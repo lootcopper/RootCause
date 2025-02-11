@@ -1,4 +1,167 @@
 {
+        "Corn_(maize)___Common_rust_": {
+          "description": "Common rust is a fungal disease that affects corn, leading to pustules on leaves that can reduce crop yield.",
+          "symptoms": [
+            "Small, reddish-brown pustules on leaves",
+            "Pustules releasing orange to brown spores",
+            "Leaves yellowing and drying prematurely"
+          ],
+          "treatment": [
+            "Apply fungicides like azoxystrobin or mancozeb",
+            "Remove and destroy infected leaves",
+            "Improve field drainage and air circulation"
+          ],
+          "prevention": [
+            "Plant resistant corn varieties",
+            "Rotate crops to reduce pathogen buildup",
+            "Avoid excessive nitrogen fertilization"
+          ]
+        },
+        "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+          "description": "Gray leaf spot is a fungal disease that causes rectangular, grayish lesions on corn leaves, leading to reduced photosynthesis.",
+          "symptoms": [
+            "Small, tan spots on leaves that expand into long, grayish lesions",
+            "Leaf tissue turning necrotic and dry",
+            "Reduced plant vigor and lower yields"
+          ],
+          "treatment": [
+            "Use fungicides like propiconazole or strobilurins",
+            "Remove infected plant debris",
+            "Ensure proper plant spacing for airflow"
+          ],
+          "prevention": [
+            "Plant resistant corn hybrids",
+            "Practice crop rotation",
+            "Avoid excessive nitrogen fertilization"
+          ]
+        },
+            "Pepper,_bell___healthy": {
+                "description": "Healthy bell pepper plants exhibit strong growth with lush green leaves and an abundance of flowers and fruit.",
+                "symptoms": [
+                    "Deep green, glossy leaves",
+                    "Strong, upright stems",
+                    "Abundant flowering and fruit production"
+                ],
+                "treatment": [
+                    "Ensure consistent watering and fertilization",
+                    "Monitor for pests and diseases regularly",
+                    "Prune weak or damaged branches to promote growth"
+                ],
+                "prevention": [
+                    "Use nutrient-rich, well-draining soil",
+                    "Provide adequate spacing for airflow",
+                    "Rotate crops each season to maintain soil health"
+                ]
+            },
+            "Corn_(maize)___healthy": {
+                "description": "Healthy corn plants grow tall and strong with vibrant green leaves and well-formed ears.",
+                "symptoms": [
+                    "Tall, sturdy stalks with deep green leaves",
+                    "Well-developed ears with full kernels",
+                    "Strong root system and resistance to lodging"
+                ],
+                "treatment": [
+                    "Maintain regular watering and fertilization",
+                    "Monitor for pests and apply treatments as needed",
+                    "Remove weeds to reduce competition for nutrients"
+                ],
+                "prevention": [
+                    "Plant in nutrient-rich, well-draining soil",
+                    "Rotate crops to prevent disease buildup",
+                    "Ensure proper spacing to allow adequate sunlight and airflow"
+                ]
+            },
+
+        "Corn_(maize)___Northern_Leaf_Blight": {
+          "description": "Northern leaf blight is a fungal disease affecting corn, causing large, elongated lesions on leaves and reducing grain production.",
+          "symptoms": [
+            "Large, cigar-shaped grayish-green lesions on leaves",
+            "Lesions turning brown and expanding",
+            "Severe infections leading to premature leaf death"
+          ],
+          "treatment": [
+            "Apply fungicides such as azoxystrobin or propiconazole",
+            "Remove and destroy infected plant material",
+            "Improve air circulation by managing plant density"
+          ],
+          "prevention": [
+            "Choose resistant corn hybrids",
+            "Rotate crops to break disease cycles",
+            "Use proper field management practices to reduce humidity"
+          ]
+        },
+        "Pepper,_bell___Bacterial_spot": {
+          "description": "Bacterial spot is a disease that causes dark, water-soaked lesions on pepper leaves and fruit, leading to defoliation and reduced yield.",
+          "symptoms": [
+            "Small, dark spots on leaves with yellow halos",
+            "Lesions coalescing into larger necrotic areas",
+            "Blister-like lesions on fruit reducing market quality"
+          ],
+          "treatment": [
+            "Apply copper-based bactericides",
+            "Remove and destroy infected plants",
+            "Improve air circulation and reduce leaf wetness"
+          ],
+          "prevention": [
+            "Plant resistant pepper varieties",
+            "Use disease-free seeds and transplants",
+            "Rotate crops to prevent bacterial buildup"
+          ]
+        },
+        "Potato___Early_blight": {
+          "description": "Early blight is a fungal disease affecting potatoes, causing brown lesions on leaves and tubers, leading to yield loss.",
+          "symptoms": [
+            "Small, dark spots with concentric rings on lower leaves",
+            "Yellowing and wilting of affected leaves",
+            "Brown sunken lesions on tubers"
+          ],
+          "treatment": [
+            "Use fungicides like chlorothalonil or mancozeb",
+            "Remove and destroy infected plant material",
+            "Avoid overhead watering"
+          ],
+          "prevention": [
+            "Plant resistant potato varieties",
+            "Practice crop rotation",
+            "Ensure proper plant spacing for airflow"
+          ]
+        },
+        "Potato___Late_blight": {
+          "description": "Late blight is a devastating fungal disease that affects potatoes, causing rapid plant decline and tuber rot.",
+          "symptoms": [
+            "Dark, water-soaked lesions on leaves",
+            "White, fuzzy fungal growth on leaf undersides",
+            "Brown, sunken lesions on tubers leading to rot"
+          ],
+          "treatment": [
+            "Apply fungicides like chlorothalonil or copper-based products",
+            "Remove infected plants immediately",
+            "Improve air circulation and reduce leaf wetness"
+          ],
+          "prevention": [
+            "Plant resistant potato varieties",
+            "Rotate crops to prevent disease buildup",
+            "Avoid planting potatoes in areas with previous late blight infections"
+          ]
+        },
+        "Potato___healthy": {
+          "description": "A healthy potato plant exhibits strong growth, dark green leaves, and no signs of disease or pest damage.",
+          "symptoms": [
+            "Vibrant, dark green leaves",
+            "Strong and sturdy plant structure",
+            "Healthy tuber formation with no signs of rot"
+          ],
+          "treatment": [
+            "Maintain proper watering and fertilization schedules",
+            "Monitor regularly for early signs of disease",
+            "Remove any damaged or dead plant material"
+          ],
+          "prevention": [
+            "Ensure good soil health and proper drainage",
+            "Practice crop rotation",
+            "Use disease-free seed potatoes"
+          ]
+        },
     "Tomato___Late_blight": {
       "description": "Late blight is a severe fungal disease that affects tomato and potato plants, often causing rapid plant decline.",
       "symptoms": [
@@ -35,6 +198,24 @@
         "Use drip irrigation to avoid wetting foliage"
       ]
     },
+    "Tomato___Bacterial_spot": {
+  "description": "Bacterial spot is a disease that affects tomato plants, causing dark lesions with yellow halos on leaves and fruit, leading to defoliation and reduced fruit quality.",
+  "symptoms": [
+    "Small, dark spots with yellow halos on leaves",
+    "Lesions on fruit with sunken, water-soaked areas",
+    "Premature leaf drop and reduced fruit yield"
+  ],
+  "treatment": [
+    "Apply copper-based bactericides",
+    "Remove and destroy infected plant material",
+    "Avoid overhead irrigation to reduce leaf wetness"
+  ],
+  "prevention": [
+    "Use disease-resistant tomato varieties",
+    "Practice crop rotation to avoid bacterial buildup",
+    "Sanitize tools and equipment to prevent disease spread"
+  ]
+},
     "Tomato___Septoria_leaf_spot": {
       "description": "Septoria leaf spot is a fungal infection that causes spots on tomato leaves, leading to premature defoliation.",
       "symptoms": [
@@ -142,5 +323,23 @@
         "Rotate crops each season",
         "Provide ample space for growth and airflow"
       ]
-    }
+    },
+    "Tomato___Early_blight": {
+  "description": "Early blight is a fungal disease that affects tomato plants, causing dark, concentric lesions on leaves, stems, and fruit. It leads to premature leaf drop and reduced yield.",
+  "symptoms": [
+    "Small, dark spots with concentric rings on older leaves",
+    "Lesions on stems that can cause the plant to wilt",
+    "Dark spots on fruit with sunken, decayed areas"
+  ],
+  "treatment": [
+    "Apply fungicides, such as chlorothalonil or mancozeb",
+    "Remove and destroy infected plant material",
+    "Improve air circulation and reduce moisture on leaves"
+  ],
+  "prevention": [
+    "Use disease-resistant tomato varieties",
+    "Rotate crops to reduce fungal buildup",
+    "Water at the base of the plant to keep leaves dry"
+  ]
+}
 }
