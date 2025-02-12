@@ -423,7 +423,6 @@
 
         function showModal() {
             modal.style.display = 'flex';
-            // Trigger reflow
             modal.offsetHeight;
             modal.classList.add('visible');
         }
@@ -485,14 +484,14 @@
             reader.onload = async function(e) {
                 const uploadedImageUrl = e.target.result;
                 
-                // Show loading overlay
+
                 const loadingOverlay = document.getElementById('loading-overlay');
                 loadingOverlay.classList.add('visible');
 
-                // Wait for 2.5 seconds
+
                 await new Promise(resolve => setTimeout(resolve, 2500));
 
-                // Hide loading overlay and show modal
+
                 loadingOverlay.classList.remove('visible');
                 showModal();
                 
@@ -575,15 +574,14 @@
             }
         });
 
-        // Add camera functionality
+
 const cameraButton = document.getElementById('camera-button');
 
-// Check if the browser supports getUserMedia
+
 function hasGetUserMedia() {
     return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
 }
 
-// Create camera elements
 const cameraModal = document.createElement('div');
 cameraModal.className = 'modal';
 cameraModal.innerHTML = `
@@ -592,7 +590,7 @@ cameraModal.innerHTML = `
         <video id="video" style="width: 100%; height: 100%;" autoplay playsinline></video>
         <button class="action-button" id="capture-button" 
             style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
-            Capture
+            Scan
         </button>
     </div>
 `;
@@ -604,7 +602,7 @@ const closeCameraModal = document.getElementById('close-camera-modal');
 
 let stream = null;
 
-// Handle camera button click
+
 cameraButton.addEventListener('click', async () => {
     if (hasGetUserMedia()) {
         try {
@@ -625,7 +623,7 @@ cameraButton.addEventListener('click', async () => {
     }
 });
 
-// Handle capture button click
+
 captureButton.addEventListener('click', () => {
     const canvas = document.createElement('canvas');
     canvas.width = video.videoWidth;
@@ -633,11 +631,11 @@ captureButton.addEventListener('click', () => {
     const context = canvas.getContext('2d');
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
     
-    // Convert the canvas to a file
+
     canvas.toBlob(async (blob) => {
         const file = new File([blob], "camera-capture.jpg", { type: "image/jpeg" });
         
-        // Stop the camera stream
+
         if (stream) {
             stream.getTracks().forEach(track => track.stop());
         }
@@ -645,18 +643,18 @@ captureButton.addEventListener('click', () => {
         cameraModal.classList.remove('visible');
         setTimeout(() => cameraModal.style.display = 'none', 300);
         
-        // Create a new FileList-like object
+
         const dataTransfer = new DataTransfer();
         dataTransfer.items.add(file);
         fileInput.files = dataTransfer.files;
         
-        // Trigger the change event
+
         const event = new Event('change', { bubbles: true });
         fileInput.dispatchEvent(event);
     }, 'image/jpeg');
 });
 
-// Handle camera modal close
+
 closeCameraModal.addEventListener('click', () => {
     if (stream) {
         stream.getTracks().forEach(track => track.stop());
