@@ -8,47 +8,44 @@ import json
 
 app = Flask(__name__)
 
-# Configuration for file uploads
 UPLOAD_FOLDER = 'static/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Load the trained model
+device = torch.device("mps" if torch.backends.mps.is_available() 
+                      else "cuda" if torch.cuda.is_available() 
+                      else "cpu")
+
 class CropDiseaseModel(nn.Module):
-    def __init__(self, num_classes=4):
+    def __init__(self, num_classes):
         super(CropDiseaseModel, self).__init__()
         self.model = models.resnet50(weights=None)
-        self.model.fc = nn.Linear(2048, num_classes)
-
+        self.model.fc = nn.Linear(self.model.fc.in_features, num_classes)
+    
     def forward(self, x):
         return self.model(x)
 
-# Update paths and model loading (keeping your existing configuration)
 train_dir = '/Users/pranay/softwareDEV/archive/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented)/train'
-num_classes = 19
-model = CropDiseaseModel(num_classes=num_classes)
+class_labels = sorted([d for d in os.listdir(train_dir) if os.path.isdir(os.path.join(train_dir, d))])
+num_classes = len(class_labels)
 
-model_path = '/Users/pranay/softwareDEV/crop_disease_model.pth'
+print(f"Detected {num_classes} classes: {class_labels}")
+
+model = CropDiseaseModel(num_classes=num_classes)
+model_path = '/Users/pranay/softwareDEV/best_crop_disease_model.pth' 
 if os.path.exists(model_path):
-    model.load_state_dict(torch.load(model_path, map_location=torch.device('mps')))
+    model.load_state_dict(torch.load(model_path, map_location=device))
+    model.to(device)
     model.eval()
     print("Model loaded successfully.")
 else:
     raise FileNotFoundError(f"Model file '{model_path}' not found. Please train the model first.")
 
-class_labels = sorted(os.listdir(train_dir))
-
-# Function to retrieve disease insights from the custom dataset
 def get_disease_insights(disease_name, confidence):
-    """
-    Get detailed insights about the disease using a custom JSON dataset
-    """
     try:
-        # Load the dataset
         with open("disease_data.json", "r") as file:
             data = json.load(file)
         
-        # Get the disease information
         disease_info = data.get(disease_name, None)
         
         if disease_info:
@@ -77,12 +74,11 @@ def get_disease_insights(disease_name, confidence):
 
 def preprocess_image(image):
     transform = transforms.Compose([
-        transforms.Resize((150, 150)),
+        transforms.Resize((224, 224)),  
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
-    image = transform(image).unsqueeze(0)
-    return image
+    return transform(image).unsqueeze(0)
 
 @app.route('/')
 def index():
@@ -97,30 +93,28 @@ def analyze():
     if file.filename == '':
         return jsonify({'error': 'No file selected'}), 400
 
-    # Save the uploaded file
     image_filename = file.filename
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], image_filename)
     file.save(file_path)
 
-    # Perform prediction
-    image = Image.open(file_path)
-    processed_image = preprocess_image(image)
+    image = Image.open(file_path).convert('RGB')
+    processed_image = preprocess_image(image).to(device)
     
+
+    temperature = 0.5  
     with torch.no_grad():
         output = model(processed_image)
-        _, predicted = torch.max(output, 1)
-        predicted_class = class_labels[predicted.item()]
-        confidence = torch.nn.functional.softmax(output, dim=1)[0] * 100
-        confidence = confidence[predicted.item()].item()
+        probabilities = torch.nn.functional.softmax(output / temperature, dim=1) 
+        confidence, predicted_idx = torch.max(probabilities, 1)
+        predicted_class = class_labels[predicted_idx.item()]
+        confidence_value = confidence.item() * 100
 
-    # Get detailed insights from the custom dataset
-    insights = get_disease_insights(predicted_class, round(confidence, 2))
+    insights = get_disease_insights(predicted_class, round(confidence_value, 2))
 
-    # Return the results as JSON
     return jsonify({
         'image_url': f'/static/uploads/{image_filename}',
         'predicted_class': predicted_class,
-        'confidence': round(confidence, 2),
+        'confidence': round(confidence_value, 2),
         'insights': insights
     })
 
