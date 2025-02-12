@@ -1,7 +1,9 @@
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/77f4016b-68cc-47ef-ad8c-1f83493d65a3" />
 
-<img width="241" alt="image" src="https://github.com/user-attachments/assets/5e05c0d3-7ab4-4b22-bbf3-55cfbbae736c" />
 
+A crop disease detector that targets the rootcause of the disease at the leaf and provides insight to farmers on the disease. Focused around bell peppers, corn, potatoes, and tomatoes. 
+Python + flask + javascript + html + css
+ResNet-50 (CNN)-for image classification.
+Pytorch- computer vision. 
+using kaggle dataset https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset/data
 
-AI that predicts crop diseases.
--works with potatoes, tomatoes, bell peppers, corn.
