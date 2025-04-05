@@ -7,4 +7,4 @@ Python + flask + javascript + html + css
 ResNet-50 (CNN)-for image classification.
 Pytorch- computer vision. 
 using kaggle dataset https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset/data
-
+(NOT A GPT WRAPPER)
